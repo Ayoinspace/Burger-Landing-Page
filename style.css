@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hero{
+    min-height: 100dvh;
+    width: 100%;
+    background: url(./header-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 45px;
+    height: 45px;
+    padding-top: 60px;
+}
+.logo{
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: progress;
+    color: white;
+    
+}
+span{
+    color: red;
+}
+nav ul{
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+nav ul li .active{
+    color: white;
+    background: red;
+    transition: .7s ease-in;
+    transform: translateY(45deg);
+}
+nav ul li .active:hover{
+    background: white;
+    color: red;
+
+}
+nav ul li a{
+    color: red;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 45px;
+    background: white;
+    transition: .4s ease-in;
+    transform: rotateY('90deg');
+}
+nav ul li a:hover{
+    background-color: red;
+    color: white;
+}
+main .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+margin-top: 60px;
+}
+.content .left{
+    height: 100%;
+    width: 50%;
+    margin-left: 45px;
+}
+.left p{
+    font-size: 55px;
+    border: 3px dotted rgb(252, 251, 251);
+    padding: 12px;
+    font-weight: 600;
+    display: inline-block;
+    background: rgb(59, 3, 3);
+    color: white;
+}
+.left h1{
+    font-size: 85px;
+    color: red;
+    line-height: 65px;
+    display: inline-block;
+    margin-top: 15px;
+}
+.left h1 span{
+    display: inline-block;
+}
+.right img{
+    margin-right: 120px;
+}
