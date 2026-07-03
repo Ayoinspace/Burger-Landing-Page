@@ -321,3 +321,216 @@ button{
     }
 
 }
+/* ===================================
+   TABLETS
+=================================== */
+
+@media (min-width:768px){
+
+    .header{
+        padding:25px 0;
+    }
+
+    .hero{
+        padding:150px 0 90px;
+    }
+
+    .hero-title{
+        font-size:4rem;
+    }
+
+    .hero-subtitle{
+        font-size:1.3rem;
+    }
+
+    .hero-description{
+        font-size:1.1rem;
+        max-width:550px;
+    }
+
+    .hero-image img{
+        max-width:600px;
+    }
+
+}
+
+
+
+/* ===================================
+   DESKTOPS
+=================================== */
+
+@media (min-width:992px){
+
+    /* Navigation */
+
+    .hamburger{
+        display:none;
+    }
+
+    .navbar{
+        gap:40px;
+    }
+
+    .nav-menu{
+
+        position:static;
+
+        width:auto;
+
+        padding:0;
+
+        background:transparent;
+
+        box-shadow:none;
+
+        border-radius:0;
+
+        flex-direction:row;
+
+        align-items:center;
+
+        gap:20px;
+
+    }
+
+    .nav-link{
+
+        color:#ffffff;
+
+        padding:12px 18px;
+
+        border-radius:999px;
+
+    }
+
+    .nav-link:hover,
+    .nav-link.active{
+
+        background:#d62828;
+
+        color:#ffffff;
+
+    }
+
+    .navbar .btn{
+        display:inline-block;
+    }
+
+
+
+    /* Hero */
+
+    .hero-content{
+
+        flex-direction:row;
+
+        justify-content:space-between;
+
+        align-items:center;
+
+        gap:60px;
+
+    }
+
+    .hero-text{
+
+        flex:1;
+
+    }
+
+    .hero-image{
+
+        flex:1;
+
+        justify-content:flex-end;
+
+    }
+
+    .hero-image img{
+
+        max-width:650px;
+
+    }
+
+    .hero-title{
+
+        font-size:5rem;
+
+    }
+
+}
+
+
+
+/* ===================================
+   LARGE DESKTOPS
+=================================== */
+
+@media (min-width:1200px){
+
+    .hero-title{
+
+        font-size:5.8rem;
+
+    }
+
+    .hero-description{
+
+        font-size:1.15rem;
+
+        max-width:560px;
+
+    }
+
+    .hero-image img{
+
+        max-width:720px;
+
+    }
+
+}
+
+
+
+/* ===================================
+   EXTRA SMALL DEVICES
+=================================== */
+
+@media (max-width:350px){
+
+    .logo{
+
+        font-size:1.6rem;
+
+    }
+
+    .hero{
+
+        padding-top:120px;
+
+    }
+
+    .hero-title{
+
+        font-size:2.2rem;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        width:100%;
+
+    }
+
+    .hero-buttons .btn{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+}
