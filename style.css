@@ -184,7 +184,7 @@ button{
 .hero{
     min-height:100dvh;
 
-    background-image:url("./images/header-bg.png");
+    background-image:url("header-bg.png");
     background-position:center;
     background-size:cover;
     background-repeat:no-repeat;
