@@ -1,96 +1,323 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ===================================
+   RESET
+=================================== */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
-.hero{
-    min-height: 100dvh;
-    width: 100%;
-    background: url(./header-bg.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+
+html{
+    scroll-behavior:smooth;
 }
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 45px;
-    height: 45px;
-    padding-top: 60px;
+
+body{
+    font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background:#ffffff;
+    color:#222;
+    overflow-x:hidden;
+    line-height:1.6;
 }
+
+img{
+    display:block;
+    max-width:100%;
+    height:auto;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+button{
+    font:inherit;
+}
+
+
+/* ===================================
+   REUSABLE CLASSES
+=================================== */
+
+.container{
+    width:min(90%,1200px);
+    margin-inline:auto;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    border:none;
+    border-radius:50px;
+    background:#d62828;
+    color:#ffffff;
+    font-size:1rem;
+    font-weight:600;
+    transition:.3s ease;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:#222;
+    transform:translateY(-3px);
+}
+
+.btn-secondary{
+    background:#ffffff;
+    color:#d62828;
+    border:2px solid #d62828;
+}
+
+.btn-secondary:hover{
+    background:#d62828;
+    color:#ffffff;
+}
+
+
+/* ===================================
+   HEADER
+=================================== */
+
+.header{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 0;
+    z-index:1000;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+
+/* ===================================
+   LOGO
+=================================== */
+
 .logo{
-    font-size: 30px;
-    font-weight: 700;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    cursor: progress;
-    color: white;
-    
+    font-size:2rem;
+    font-weight:700;
+    color:#ffffff;
 }
-span{
-    color: red;
+
+.logo span{
+    color:#d62828;
 }
-nav ul{
-    display: flex;
-    gap: 25px;
-    list-style: none;
+
+
+/* ===================================
+   NAVIGATION
+=================================== */
+
+.nav-menu{
+    position:fixed;
+    top:85px;
+    right:-100%;
+    width:260px;
+    background:#ffffff;
+    padding:30px;
+    border-radius:15px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+    transition:.4s ease;
 }
-nav ul li .active{
-    color: white;
-    background: red;
-    transition: .7s ease-in;
-    transform: translateY(45deg);
+
+.nav-menu.active{
+    right:20px;
 }
-nav ul li .active:hover{
-    background: white;
-    color: red;
+
+.nav-link{
+    color:#222;
+    font-weight:600;
+    transition:.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active{
+    color:#d62828;
+}
+
+.navbar .btn{
+    display:none;
+}
+
+
+/* ===================================
+   HAMBURGER
+=================================== */
+
+.hamburger{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:transparent;
+    border:none;
+
+    color:#ffffff;
+    font-size:2rem;
+
+    cursor:pointer;
+}
+
+.hamburger i{
+    transition:.3s ease;
+}
+
+
+/* ===================================
+   HERO SECTION
+=================================== */
+
+.hero{
+    min-height:100dvh;
+
+    background-image:url("./images/header-bg.png");
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+
+    display:flex;
+    align-items:center;
+
+    padding:130px 0 70px;
+}
+
+
+/* ===================================
+   HERO CONTENT
+=================================== */
+
+.hero-content{
+    display:flex;
+    flex-direction:column;
+    gap:50px;
+}
+
+
+/* ===================================
+   HERO TEXT
+=================================== */
+
+.hero-text{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.hero-subtitle{
+
+    display:inline-block;
+
+    padding:12px 22px;
+
+    background:rgba(70,15,15,.9);
+
+    border:2px dashed #ffffff;
+
+    color:#ffffff;
+
+    font-size:1.1rem;
+    font-weight:600;
+
+    margin-bottom:20px;
 
 }
-nav ul li a{
-    color: red;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 600;
-    padding: 12px 24px;
-    border-radius: 45px;
-    background: white;
-    transition: .4s ease-in;
-    transform: rotateY('90deg');
+
+.hero-title{
+
+    font-size:2.8rem;
+    line-height:1.1;
+
+    color:#ffffff;
+
+    margin-bottom:20px;
+
 }
-nav ul li a:hover{
-    background-color: red;
-    color: white;
+
+.hero-title span{
+    color:#d62828;
 }
-main .content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-margin-top: 60px;
+
+.hero-description{
+
+    color:#eeeeee;
+
+    max-width:500px;
+
+    margin-bottom:35px;
+
 }
-.content .left{
-    height: 100%;
-    width: 50%;
-    margin-left: 45px;
+
+
+/* ===================================
+   HERO BUTTONS
+=================================== */
+
+.hero-buttons{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
 }
-.left p{
-    font-size: 55px;
-    border: 3px dotted rgb(252, 251, 251);
-    padding: 12px;
-    font-weight: 600;
-    display: inline-block;
-    background: rgb(59, 3, 3);
-    color: white;
+
+
+/* ===================================
+   HERO IMAGE
+=================================== */
+
+.hero-image{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
 }
-.left h1{
-    font-size: 85px;
-    color: red;
-    line-height: 65px;
-    display: inline-block;
-    margin-top: 15px;
+
+.hero-image img{
+
+    width:100%;
+
+    max-width:500px;
+
+    animation:float 3s ease-in-out infinite;
+
 }
-.left h1 span{
-    display: inline-block;
-}
-.right img{
-    margin-right: 120px;
+
+
+/* ===================================
+   ANIMATIONS
+=================================== */
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
 }
