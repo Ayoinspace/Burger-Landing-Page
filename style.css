@@ -16,7 +16,7 @@ html{
 
 body{
     font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background: #ffffff;
+    background: url("header.png");
     color:#222;
     overflow-x:hidden;
     line-height:1.6;
